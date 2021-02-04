@@ -1,0 +1,58 @@
+<!DOCTYPE html>  
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego tres en uno</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="../header.css">
+  <link rel="stylesheet" href="titulo.css">
+  <link rel="stylesheet" href="juego.css">
+</head>
+<body>  
+  <header>
+    <div class="header__izquierdo">
+      <a class="header__a" href="../index.html">Luis Villegas</a>
+    </div>
+    <div class="header__derecho">
+      <div class="header__desplegable" id="desplegable"></div>
+      <nav class="none">
+        <a class="header__a header__derecho__a" href="../index.html">Inicio</a>
+        <a class="header__a header__derecho__a" href="juego.html">Tres en uno</a>
+      </nav>
+    </div>
+  </header>
+
+  <h1 class="titulo">Tres en linea <span class="titulo__desplegable">Tambien conocido como: Ceros y cruces, Tic-Tac-Toe</span></h1>
+  <p>Es un juego de lápiz y papel entre dos jugadores: O y X, que marcan los espacios de un tablero de 3×3 alternadamente </p>
+  <h2>Reglas</h2>
+  <p>Cada jugador solo debe colocar su símbolo una vez por turno y no debe ser sobre una casilla ya jugada. Se debe conseguir realizar una línea recta o diagonal por símbolo, el que lo consiga se ganará un punto. Gana el jugador que tenga mas puntos.</p>
+  <div class="juego">
+    <button class="boton-incio boton">Inicia una partida</button>
+    <div class="juego__contenedor none">
+      <button class="juego__boton juego__boton1"></button>
+      <button class="juego__boton juego__boton2"></button>
+      <button class="juego__boton juego__boton3"></button>
+      <button class="juego__boton juego__boton4"></button>
+      <button class="juego__boton juego__boton5"></button>
+      <button class="juego__boton juego__boton6"></button>
+      <button class="juego__boton juego__boton7"></button>
+      <button class="juego__boton juego__boton8"></button>
+      <button class="juego__boton juego__boton9"></button>
+    </div>
+    <p class="juego__sms"></p>
+    <div class="juego__puntaje-jugador1 none">
+      <p class="juego__jugador1">Jugador 1</p>
+      <p class="jugador__puntos1">puntos</p>
+    </div>
+    <div class="juego__puntaje-jugador2 none">
+      <p class="juego__jugador2">Jugador 2</p>
+      <p class="jugador__puntos2">puntos</p>
+    </div>
+    <button class="boton-siguiente-ronda none boton">Siguiente ronda</button>
+    <button class="boton-finalizar none boton">Finalizar el juego</button>
+  </div>
+  <script src="../header.js"></script>
+  <script src="juego.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+body {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(5, 31, 99);
+  font-weight: 500;
+}
+
+.juego {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas:
+    "inicio     inicio     inicio"
+    "contenedor contenedor contenedor"
+    "sms        sms        sms"
+    "puntos1    nada       puntos2"
+    "repetir    repetir    repetir"
+    "final      final      final";
+}
+
+.juego__sms {
+  grid-area: sms;
+  text-align: center;
+}
+
+.boton-incio {
+  grid-area: inicio;
+  display: block;
+  margin: auto;
+  margin-top: 2em;
+}
+
+.boton {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 4px;
+  border: 3.5px solid rgb(5, 31, 99);
+  color: rgb(5, 31, 99);
+  transition: 0.5s;
+  font-weight: 500;
+}
+
+.boton:hover {
+  transform: scale(1.05, 1.05);
+  box-shadow: 2px 2px 5px #3334;
+  background-color: rgb(5, 31, 99);
+  color: #fff;
+}
+
+.juego__contenedor {
+  grid-area: contenedor;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: 20em;
+  height: 20em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "uno    dos   tres"
+    "cuatro cinco seis"
+    "siete  ocho  nueve";
+}
+
+/*botones de el tres en uno*/
+.juego__boton {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 2px;
+}
+
+.boton-siguiente-ronda {
+  grid-area: repetir;
+}
+
+.juego__boton1 {
+  grid-area: uno;
+  border-right: 3px solid rgb(5, 31, 90);
+  border-bottom: 3px solid rgb(5, 31, 90);
+}
+
+.juego__boton2 {
+  grid-area: dos;
+  border-left: 3px solid rgb(5, 31, 90);
+  border-bottom: 3px solid rgb(5, 31, 90);
+  border-right: 3px solid rgb(5, 31, 90);
+}
+
+.juego__boton3 {
+  grid-area: tres;
+  border-left: 3px solid rgb(5, 31, 90);
+  border-bottom: 3px solid rgb(5, 31, 90);
+}
+
+.juego__boton4 {
+  grid-area: cuatro;
+  border-top: 3px solid rgb(5, 31, 90);
+  border-bottom: 3px solid rgb(5, 31, 90);
+  border-right: 3px solid rgb(5, 31, 90);
+}
+
+.juego__boton5 {
+  grid-area: cinco;
+  border: 3px solid rgb(5, 31, 90);
+}
+
+.juego__boton6 {
+  grid-area: seis;
+  border-top: 3px solid rgb(5, 31, 90);
+  border-left: 3px solid rgb(5, 31, 90);
+  border-bottom: 3px solid rgb(5, 31, 90);
+}
+
+.juego__boton7 {
+  grid-area: siete;
+  border-top: 3px solid rgb(5, 31, 90);
+  border-right: 3px solid rgb(5, 31, 90);
+}
+
+.juego__boton8 {
+  grid-area: ocho;
+  border-left: 3px solid rgb(5, 31, 90);
+  border-top: 3px solid rgb(5, 31, 90);
+  border-right: 3px solid rgb(5, 31, 90);
+}
+
+.juego__boton9 {
+  grid-area: nueve;
+  border-left: 3px solid rgb(5, 31, 90);
+  border-top: 3px solid rgb(5, 31, 90);
+}
+
+/*Aqui van los estilos de los botones de el tres en uno
+cuando el jugador le haga click*/
+.juego__o {
+  position: relative;
+}
+
+.juego__o::after {
+  content: " ";
+  width: 5em;
+  height: 5em;
+  top: 0.3em;
+  left: 0.3em;
+  position: absolute;
+  border: 7px solid yellowgreen;
+  border-radius: 50%;
+}
+
+.juego__x {
+  position: relative;
+}
+
+.juego__x::after {
+  content: " ";
+  width: 100px;
+  height: 5px;
+  border-radius: 2.5px;
+  left: 3px;
+  transform: rotate(45deg);
+  background-color: blueviolet;
+  position: absolute;
+}
+
+.juego__x::before {
+  content: " ";
+  width: 100px;
+  height: 5px;
+  border-radius: 2.5px;
+  left: 3px;
+  transform: rotate(-45deg);
+  background-color: rgb(16, 114, 136);
+  position: absolute;
+}
+/*Puntaje de los jugadores*/
+.juego__puntaje-jugador1 {
+  grid-area: puntos1;
+  width: 90px;
+  height: 80px;
+  margin-left: auto;
+}
+
+.juego__puntaje-jugador2 {
+  grid-area: puntos2;
+  width: 90px;
+  height: 80px;
+  margin-right: auto;
+}
+
+.juego__jugador1,
+.juego__jugador2 {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.jugador__puntos1,
+.jugador__puntos2 {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+}
+
+/*botones de final de partida y reinicio*/
+.boton-siguiente-ronda {
+  grid-area: repetir;
+  display: block;
+  margin: auto;
+  margin-top: 2em;
+}
+
+.boton-finalizar {
+  grid-area: final;
+  display: block;
+  margin: auto;
+  margin-top: 2em;
+}
+
+.none {
+  display: none;
+}

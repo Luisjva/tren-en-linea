@@ -1,0 +1,23 @@
+.titulo {
+  position: relative;
+  display: inline-block;
+}
+
+.titulo__desplegable {
+  visibility: hidden;
+  width: 160px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 100;
+
+  position: absolute;
+  z-index: 10;
+}
+
+.titulo:hover .titulo__desplegable {
+  visibility: visible;
+}
