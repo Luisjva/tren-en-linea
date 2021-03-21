@@ -1,7 +1,7 @@
 body {
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
-  color: rgb(5, 31, 99);
+  color: #232526;
   font-weight: 500;
 }
 
@@ -21,6 +21,9 @@ body {
 .juego__sms {
   grid-area: sms;
   text-align: center;
+
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .boton-incio {
@@ -35,8 +38,8 @@ body {
   outline: none;
   background: none;
   padding: 4px;
-  border: 3.5px solid rgb(5, 31, 99);
-  color: rgb(5, 31, 99);
+  border: 3.5px solid #232526;
+  color: #232526;
   transition: 0.5s;
   font-weight: 500;
 }
@@ -44,7 +47,7 @@ body {
 .boton:hover {
   transform: scale(1.05, 1.05);
   box-shadow: 2px 2px 5px #3334;
-  background-color: rgb(5, 31, 99);
+  background-color: #232526;
   color: #fff;
 }
 
@@ -57,7 +60,7 @@ body {
   height: 20em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
   grid-template-areas:
     "uno    dos   tres"
     "cuatro cinco seis"
@@ -78,59 +81,59 @@ body {
 
 .juego__boton1 {
   grid-area: uno;
-  border-right: 3px solid rgb(5, 31, 90);
-  border-bottom: 3px solid rgb(5, 31, 90);
+  border-right: 3px solid #232526;
+  border-bottom: 3px solid #232526;
 }
 
 .juego__boton2 {
   grid-area: dos;
-  border-left: 3px solid rgb(5, 31, 90);
-  border-bottom: 3px solid rgb(5, 31, 90);
-  border-right: 3px solid rgb(5, 31, 90);
+  border-left: 3px solid #232526;
+  border-bottom: 3px solid #232526;
+  border-right: 3px solid #232526;
 }
 
 .juego__boton3 {
   grid-area: tres;
-  border-left: 3px solid rgb(5, 31, 90);
-  border-bottom: 3px solid rgb(5, 31, 90);
+  border-left: 3px solid #232526;
+  border-bottom: 3px solid #232526;
 }
 
 .juego__boton4 {
   grid-area: cuatro;
-  border-top: 3px solid rgb(5, 31, 90);
-  border-bottom: 3px solid rgb(5, 31, 90);
-  border-right: 3px solid rgb(5, 31, 90);
+  border-top: 3px solid #232526;
+  border-bottom: 3px solid #232526;
+  border-right: 3px solid #232526;
 }
 
 .juego__boton5 {
   grid-area: cinco;
-  border: 3px solid rgb(5, 31, 90);
+  border: 3px solid #232526;
 }
 
 .juego__boton6 {
   grid-area: seis;
-  border-top: 3px solid rgb(5, 31, 90);
-  border-left: 3px solid rgb(5, 31, 90);
-  border-bottom: 3px solid rgb(5, 31, 90);
+  border-top: 3px solid #232526;
+  border-left: 3px solid #232526;
+  border-bottom: 3px solid #232526;
 }
 
 .juego__boton7 {
   grid-area: siete;
-  border-top: 3px solid rgb(5, 31, 90);
-  border-right: 3px solid rgb(5, 31, 90);
+  border-top: 3px solid #232526;
+  border-right: 3px solid #232526;
 }
 
 .juego__boton8 {
   grid-area: ocho;
-  border-left: 3px solid rgb(5, 31, 90);
-  border-top: 3px solid rgb(5, 31, 90);
-  border-right: 3px solid rgb(5, 31, 90);
+  border-left: 3px solid #232526;
+  border-top: 3px solid #232526;
+  border-right: 3px solid #232526;
 }
 
 .juego__boton9 {
   grid-area: nueve;
-  border-left: 3px solid rgb(5, 31, 90);
-  border-top: 3px solid rgb(5, 31, 90);
+  border-left: 3px solid #232526;
+  border-top: 3px solid #232526;
 }
 
 /*Aqui van los estilos de los botones de el tres en uno
@@ -141,12 +144,12 @@ cuando el jugador le haga click*/
 
 .juego__o::after {
   content: " ";
-  width: 5em;
-  height: 5em;
-  top: 0.3em;
-  left: 0.3em;
+  width: 4.5em;
+  height: 4.5em;
+  top: 0.6em;
+  left: 0.6em;
   position: absolute;
-  border: 7px solid yellowgreen;
+  border: 7px solid #ec2f4b;
   border-radius: 50%;
 }
 
@@ -161,7 +164,7 @@ cuando el jugador le haga click*/
   border-radius: 2.5px;
   left: 3px;
   transform: rotate(45deg);
-  background-color: blueviolet;
+  background-color: #009fff;
   position: absolute;
 }
 
@@ -172,7 +175,7 @@ cuando el jugador le haga click*/
   border-radius: 2.5px;
   left: 3px;
   transform: rotate(-45deg);
-  background-color: rgb(16, 114, 136);
+  background-color: #009fff;
   position: absolute;
 }
 /*Puntaje de los jugadores*/
@@ -222,4 +225,62 @@ cuando el jugador le haga click*/
 
 .none {
   display: none;
+}
+
+@media screen and (max-width: 338px) {
+  .juego__contenedor {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .juego__o::after {
+    width: 3.6em;
+    height: 3.6em;
+    top: 0.2em;
+    left: 0.2em;
+    border: 5px solid yellowgreen;
+  }
+
+  .juego__x {
+    position: relative;
+  }
+
+  .juego__x::after {
+    width: 75px;
+    height: 5px;
+    left: 0px;
+  }
+
+  .juego__x::before {
+    width: 75px;
+    height: 5px;
+    left: 0px;
+  }
+}
+
+@media screen and (max-width: 257px) {
+  .juego__contenedor {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .juego__o::after {
+    width: 2.8em;
+    height: 2.8em;
+    top: 0.25em;
+    left: 0.25em;
+    border: 4px solid yellowgreen;
+  }
+
+  .juego__x::after {
+    width: 60px;
+    height: 5px;
+    left: 0px;
+  }
+
+  .juego__x::before {
+    width: 60px;
+    height: 5px;
+    left: 0px;
+  }
 }

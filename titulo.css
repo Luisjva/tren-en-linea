@@ -1,23 +1,35 @@
+h2,
+h3,
+h4,
+h5,
+h6 {
+  background: #232526;
+  background-image: linear-gradient(to right, #232526, #414345);
+
+  display: inline;
+
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.contenedor-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 200px;
+  background-image: linear-gradient(to right, #23252669, #41434569),
+    url(header.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.ola {
+  position: absolute;
+  bottom: 0;
+}
+
 .titulo {
   position: relative;
-  display: inline-block;
-}
-
-.titulo__desplegable {
-  visibility: hidden;
-  width: 160px;
-  background-color: #000;
   color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 100;
-
-  position: absolute;
-  z-index: 10;
-}
-
-.titulo:hover .titulo__desplegable {
-  visibility: visible;
 }
