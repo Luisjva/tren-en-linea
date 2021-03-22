@@ -32,12 +32,28 @@ btninico.addEventListener('click', ()=> {
   puntajeTexto1.classList.remove("none");
   puntajeTexto2.classList.remove("none");
   btninico.classList.add("none");
-  nombreJugador1.innerHTML = prompt("Nombre del jugador 1");
-  nombreJugador2.innerHTML = prompt("Nombre del jugador 2");
+  nombre1("Nombre del jugador 1");
+  nombre2("Nombre del jugador 2")
   jugador1Puntaje.innerHTML = puntajeJugador1;
   jugador2Puntaje.innerHTML = puntajeJugador2;
   jugadorActual(1)
 })
+
+function nombre1(mensaje) {
+  let valor = prompt(`${mensaje}`);
+  nombreJugador1.innerHTML = valor;
+  if (valor.length === 0) {
+    nombre1("No puede dejar el nombre de el usuario vacío, por favor inglese el nombre de el jugador 1");
+  }else{}
+}
+
+function nombre2(mensaje) {
+  let valor = prompt(`${mensaje}`);
+  nombreJugador2.innerHTML = valor;
+  if (valor.length === 0) {
+    nombre2("No puede dejar el nombre de el usuario vacío, por favor inglese el nombre de el jugador 2");
+  }else{}
+}
 
 
 for(let i = 0; i < btnlen; i++) {
@@ -167,8 +183,6 @@ for(let i = 0; i < btnlen; i++) {
         sms.classList.remove("amarillo");
       }, 4000)
     }
-    
-    console.log(jugadas)
   })
   
 }
