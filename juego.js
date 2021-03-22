@@ -42,21 +42,18 @@ btninico.addEventListener('click', ()=> {
 for(let i = 0; i < btnlen; i++) {
   boton = botones[i];
 
-  boton.addEventListener('click', (e)=>{
-
-
-    
+  boton.addEventListener('click', (e)=>{    
     if(partida[i] === undefined) {
       
       if ( //Si ocurre un empate
         jugadas >= 5 && partida[0] == 2 && partida[4] == 2 && partida[8] == 2 && jugadas || 
-          jugadas >= 4 && partida[2] == 2 && partida[4] == 2 && partida[6] == 2 && jugadas ||
-          jugadas >= 4 && partida[0] == 2 && partida[3] == 2 && partida[6] == 2 && jugadas ||
-          jugadas >= 4 && partida[1] == 2 && partida[4] == 2 && partida[7] == 2 && jugadas ||
-          jugadas >= 4 && partida[2] == 2 && partida[5] == 2 && partida[8] == 2 && jugadas ||
-          jugadas >= 4 && partida[0] == 2 && partida[1] == 2 && partida[2] == 2 && jugadas ||
-          jugadas >= 4 && partida[3] == 2 && partida[4] == 2 && partida[5] == 2 && jugadas ||
-          jugadas >= 4 && partida[6] == 2 && partida[7] == 2 && partida[8] == 2 && jugadas 
+        jugadas >= 4 && partida[2] == 2 && partida[4] == 2 && partida[6] == 2 && jugadas ||
+        jugadas >= 4 && partida[0] == 2 && partida[3] == 2 && partida[6] == 2 && jugadas ||
+        jugadas >= 4 && partida[1] == 2 && partida[4] == 2 && partida[7] == 2 && jugadas ||
+        jugadas >= 4 && partida[2] == 2 && partida[5] == 2 && partida[8] == 2 && jugadas ||
+        jugadas >= 4 && partida[0] == 2 && partida[1] == 2 && partida[2] == 2 && jugadas ||
+        jugadas >= 4 && partida[3] == 2 && partida[4] == 2 && partida[5] == 2 && jugadas ||
+        jugadas >= 4 && partida[6] == 2 && partida[7] == 2 && partida[8] == 2 && jugadas 
       ) {  
         btnFinRonda.classList.remove("none");
         btnFinal.classList.remove("none"); 
@@ -151,6 +148,8 @@ for(let i = 0; i < btnlen; i++) {
      } else {
       console.log("No puede jugar en un casilla que ya esta precionada")
     }
+    
+    console.log(jugadas)
   })
   
 }
