@@ -36,6 +36,7 @@ btninico.addEventListener('click', ()=> {
   nombreJugador2.innerHTML = prompt("Nombre del jugador 2");
   jugador1Puntaje.innerHTML = puntajeJugador1;
   jugador2Puntaje.innerHTML = puntajeJugador2;
+  jugadorActual(1)
 })
 
 
@@ -90,8 +91,14 @@ for(let i = 0; i < btnlen; i++) {
           sms.innerHTML= nombreJugador1.textContent + " ganó la ronda."
           btnFinRonda.classList.remove("none");
           btnFinal.classList.remove("none");
+          nombreJugador1.classList.remove("jugador1-actual");
+          nombreJugador2.classList.remove("jugador2-actual");
         }
-        jugadas++
+        jugadas++;
+        if (ganador != 1) {
+          jugadorActual(jugadas + 1)
+        }
+        
       }else if (jugadas%2 !== 0) { //si es el jugador2
         partida[i] = 2;
 
@@ -125,9 +132,14 @@ for(let i = 0; i < btnlen; i++) {
             sms.innerHTML= nombreJugador2.textContent + " ganó la ronda."
             btnFinRonda.classList.remove("none");
             btnFinal.classList.remove("none");
+            nombreJugador1.classList.remove("jugador1-actual");
+            nombreJugador2.classList.remove("jugador2-actual");
         }
 
         jugadas++;
+        if (ganador != 1) {
+          jugadorActual(jugadas + 1)
+        }
       }else {}
 
       if (
@@ -141,9 +153,11 @@ for(let i = 0; i < btnlen; i++) {
         partida[7] != undefined && 
         partida[8] != undefined && ganador == 0) {
         console.log("empate"); 
+        sms.innerHTML = "Empate"
         btnFinRonda.classList.remove("none");
         btnFinal.classList.remove("none");
-
+        nombreJugador1.classList.remove("jugador1-actual");
+        nombreJugador2.classList.remove("jugador2-actual");
       }
      } else {
       console.log("No puede jugar en un casilla que ya esta precionada")
@@ -153,7 +167,6 @@ for(let i = 0; i < btnlen; i++) {
   })
   
 }
-
 
 btnFinRonda.addEventListener('click', function () {
   
@@ -183,6 +196,7 @@ btnFinRonda.addEventListener('click', function () {
   sms.innerHTML = "";
   btnFinRonda.classList.add("none");
   btnFinal.classList.add("none");
+  jugadorActual(jugadas + 1)
 });
 
 btnFinal.addEventListener('click', function () {
@@ -222,3 +236,13 @@ btnFinal.addEventListener('click', function () {
   puntajeJugador2= 0;
   jugadas = 0;
 })
+
+function jugadorActual(jugada) {
+  if (jugada%2 != 0) {
+    nombreJugador1.classList.add("jugador1-actual");
+    nombreJugador2.classList.remove("jugador2-actual");
+  } else {
+    nombreJugador2.classList.add("jugador2-actual");
+    nombreJugador1.classList.remove("jugador1-actual")
+  }
+}

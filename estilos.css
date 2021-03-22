@@ -2,3 +2,13 @@
   width: 90%;
   margin: auto;
 }
+
+.jugador1-actual {
+  background: linear-gradient(transparent, #ec2f4bd5);
+  border-radius: 5px;
+}
+
+.jugador2-actual {
+  background: linear-gradient(transparent, #009fffd5);
+  border-radius: 5px;
+}
