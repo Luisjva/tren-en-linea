@@ -160,7 +160,12 @@ for(let i = 0; i < btnlen; i++) {
         nombreJugador2.classList.remove("jugador2-actual");
       }
      } else {
-      console.log("No puede jugar en un casilla que ya esta precionada")
+      sms.innerHTML = "No puede jugar en un casilla que ya esta precionada, intentelo de nuevo";
+      sms.classList.add("amarillo")
+      setTimeout( ()=> {
+        sms.innerHTML = " ";
+        sms.classList.remove("amarillo");
+      }, 4000)
     }
     
     console.log(jugadas)
