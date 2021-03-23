@@ -27,6 +27,7 @@ h6 {
 .ola {
   position: absolute;
   bottom: 0;
+  width: 100%;
 }
 
 .titulo {

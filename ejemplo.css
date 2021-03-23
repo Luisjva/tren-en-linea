@@ -1,0 +1,192 @@
+.ejemplo {
+  display: grid;
+}
+
+.ejemplo__contenedor {
+  margin: 2rem auto;
+  position: relative;
+  width: 10em;
+  height: 10em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "uno    dos   tres"
+    "cuatro cinco seis"
+    "siete  ocho  nueve";
+}
+
+.ejemplo__boton {
+  padding: 2px;
+}
+
+.ejemplo__boton1 {
+  grid-area: uno;
+  border-right: 3px solid #232526;
+  border-bottom: 3px solid #232526;
+}
+
+.ejemplo__boton2 {
+  grid-area: dos;
+  border-left: 3px solid #232526;
+  border-bottom: 3px solid #232526;
+  border-right: 3px solid #232526;
+}
+
+.ejemplo__boton3 {
+  grid-area: tres;
+  border-left: 3px solid #232526;
+  border-bottom: 3px solid #232526;
+}
+
+.ejemplo__boton4 {
+  grid-area: cuatro;
+  border-top: 3px solid #232526;
+  border-bottom: 3px solid #232526;
+  border-right: 3px solid #232526;
+}
+
+.ejemplo__boton5 {
+  grid-area: cinco;
+  border: 3px solid #232526;
+}
+
+.ejemplo__boton6 {
+  grid-area: seis;
+  border-top: 3px solid #232526;
+  border-left: 3px solid #232526;
+  border-bottom: 3px solid #232526;
+}
+
+.ejemplo__boton7 {
+  grid-area: siete;
+  border-top: 3px solid #232526;
+  border-right: 3px solid #232526;
+}
+
+.ejemplo__boton8 {
+  grid-area: ocho;
+  border-left: 3px solid #232526;
+  border-top: 3px solid #232526;
+  border-right: 3px solid #232526;
+}
+
+.ejemplo__boton9 {
+  grid-area: nueve;
+  border-left: 3px solid #232526;
+  border-top: 3px solid #232526;
+}
+
+.ejemplo__linea1::after {
+  content: " ";
+  width: 200px;
+  height: 5px;
+  border-radius: 2.5px;
+  left: -10%;
+  top: 50%;
+  transform: rotate(45deg);
+  background-color: #009fff;
+  position: absolute;
+}
+
+.ejemplo__linea2::after {
+  content: " ";
+  width: 200px;
+  height: 5px;
+  border-radius: 2.5px;
+  left: -10%;
+  top: 50%;
+  transform: rotate(-45deg);
+  background-color: #ec2f4b;
+  position: absolute;
+}
+
+.ejemplo__linea3::after {
+  content: " ";
+  width: 200px;
+  height: 5px;
+  border-radius: 2.5px;
+  left: -10%;
+  top: 50%;
+  transform: rotate(0deg);
+  background-color: #ec2f4b;
+  position: absolute;
+}
+
+.ejemplo__linea4::after {
+  content: " ";
+  width: 200px;
+  height: 5px;
+  border-radius: 2.5px;
+  left: -12%;
+  top: 50%;
+  transform: rotate(90deg);
+  background-color: #009fff;
+  position: absolute;
+}
+
+.ejemplo__linea5::after {
+  content: " ";
+  width: 200px;
+  height: 5px;
+  border-radius: 2.5px;
+  left: -12%;
+  top: 15%;
+  transform: rotate(0deg);
+  background-color: #009fff;
+  position: absolute;
+}
+
+.ejemplo__linea6::after {
+  content: " ";
+  width: 200px;
+  height: 5px;
+  border-radius: 2.5px;
+  left: -12%;
+  top: 83%;
+  transform: rotate(0deg);
+  background-color: #009fff;
+  position: absolute;
+}
+
+.ejemplo__linea7::after {
+  content: " ";
+  width: 200px;
+  height: 5px;
+  border-radius: 2.5px;
+  left: -45%;
+  top: 50%;
+  transform: rotate(90deg);
+  background-color: #ec2f4b;
+  position: absolute;
+}
+
+.ejemplo__linea8::after {
+  content: " ";
+  width: 200px;
+  height: 5px;
+  border-radius: 2.5px;
+  left: 22%;
+  top: 50%;
+  transform: rotate(90deg);
+  background-color: #ec2f4b;
+  position: absolute;
+}
+
+@media screen and (min-width: 400px) {
+  .ejemplo {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  .ejemplo {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .ejemplo {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
