@@ -85,7 +85,7 @@
   left: -10%;
   top: 50%;
   transform: rotate(45deg);
-  background-color: #009fff;
+  background: linear-gradient(45deg, #009fff, #ec2f4b);
   position: absolute;
 }
 
@@ -97,7 +97,7 @@
   left: -10%;
   top: 50%;
   transform: rotate(-45deg);
-  background-color: #ec2f4b;
+  background: linear-gradient(45deg, #009fff, #ec2f4b);
   position: absolute;
 }
 
@@ -109,7 +109,7 @@
   left: -10%;
   top: 50%;
   transform: rotate(0deg);
-  background-color: #ec2f4b;
+  background: linear-gradient(45deg, #009fff, #ec2f4b);
   position: absolute;
 }
 
@@ -121,7 +121,7 @@
   left: -12%;
   top: 50%;
   transform: rotate(90deg);
-  background-color: #009fff;
+  background: linear-gradient(45deg, #009fff, #ec2f4b);
   position: absolute;
 }
 
@@ -133,7 +133,7 @@
   left: -12%;
   top: 15%;
   transform: rotate(0deg);
-  background-color: #009fff;
+  background: linear-gradient(45deg, #009fff, #ec2f4b);
   position: absolute;
 }
 
@@ -145,7 +145,7 @@
   left: -12%;
   top: 83%;
   transform: rotate(0deg);
-  background-color: #009fff;
+  background: linear-gradient(45deg, #009fff, #ec2f4b);
   position: absolute;
 }
 
@@ -157,7 +157,7 @@
   left: -45%;
   top: 50%;
   transform: rotate(90deg);
-  background-color: #ec2f4b;
+  background: linear-gradient(45deg, #009fff, #ec2f4b);
   position: absolute;
 }
 
@@ -169,7 +169,7 @@
   left: 22%;
   top: 50%;
   transform: rotate(90deg);
-  background-color: #ec2f4b;
+  background: linear-gradient(45deg, #009fff, #ec2f4b);
   position: absolute;
 }
 
